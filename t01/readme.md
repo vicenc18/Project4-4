@@ -7,9 +7,7 @@ Ha l'hora de proritzar la importancia ho el orde en que compiar/guardar les dade
 3. Carpetes Personals dels Usuaris:
    Si esl veritat que no es tant important com el dos primer pero tambe es nesesari fer una copia ja que es on el usuaris tenen la feina diaria
 
-   
-
-
+---
 
 
 
@@ -59,5 +57,33 @@ La còpia completa diària permet disposar sempre d’un punt de restauració fi
   En cas que es corrompi una incremental o sigui necessari restaurar tota la base de dades, aquesta còpia completa facilita un procés de recuperació **més ràpid i senzill**.
 
 La combinació de **incrementals freqüents + completa diària** minimitza l’espai d’emmagatzematge necessari i alhora compleix tots els requisits de seguretat i recuperació del sistema.
+---
+
+# Mitjans i Ubicació (Regla 3-2-1)
+
+## Mitjans recomanats
+NAS local:  
+  Per emmagatzemar les còpies **diàries i incrementals**. És ràpid i permet una recuperació immediata.
+
+  Núvol (Cloud):  
+  Per guardar les còpies **setmanals o mensuals** fora de les instal·lacions. Protegeix davant robatoris, incendis o desastres.
+
+  Disc dur extern:  
+  Per les còpies **mensuals d’arxiu**, mantingut desconnectat per evitar riscos de ransomware.
+
+---
+
+## Ubicació (seguint la regla 3-2-1)
+
+1a còpia — NAS local (on-site):  
+  Conté les còpies incrementals i les còpies completes diàries.
+
+2a còpia — Disc extern (on-site separat):  
+  Còpies completes setmanals o mensuals, guardades en un espai segur o físicament separat del servidor.
+
+3a còpia — Cloud (off-site):  
+  Còpia completa mensual per garantir que les dades es poden recuperar encara que tota la infraestructura local falli.
+
+---
 
    
