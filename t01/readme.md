@@ -59,9 +59,9 @@ La còpia completa diària permet disposar sempre d’un punt de restauració fi
 La combinació de **incrementals freqüents + completa diària** minimitza l’espai d’emmagatzematge necessari i alhora compleix tots els requisits de seguretat i recuperació del sistema.
 ---
 
-# Mitjans i Ubicació (Regla 3-2-1)
+## Mitjans i Ubicació (Regla 3-2-1)
 
-## Mitjans recomanats
+### Mitjans recomanats
 NAS local:  
   Per emmagatzemar les còpies **diàries i incrementals**. És ràpid i permet una recuperació immediata.
 
@@ -73,7 +73,7 @@ NAS local:
 
 ---
 
-## Ubicació (seguint la regla 3-2-1)
+### Ubicació (seguint la regla 3-2-1)
 
 1a còpia — NAS local (on-site):  
   Conté les còpies incrementals i les còpies completes diàries.
