@@ -56,7 +56,8 @@ Les còpies incrementals cada 4 hores garanteixen que, en cas d’error o fallad
 La còpia completa diària permet disposar sempre d’un punt de restauració fiable.  
   En cas que es corrompi una incremental o sigui necessari restaurar tota la base de dades, aquesta còpia completa facilita un procés de recuperació **més ràpid i senzill**.
 
-La combinació de **incrementals freqüents + completa diària** minimitza l’espai d’emmagatzematge necessari i alhora compleix tots els requisits de seguretat i recuperació del sistema.
+La combinació de incrementals freqüents + completa diària minimitza l’espai d’emmagatzematge necessari i alhora compleix tots els requisits de seguretat i recuperació del sistema.
+
 ---
 
 ## Mitjans i Ubicació (Regla 3-2-1)
