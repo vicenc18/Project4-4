@@ -1,5 +1,4 @@
-# Project4
-# Proyecto EverPia 3: _“Sobreviure en una empresa IT”_
+# Project4 _“Sobreviure en una empresa IT”_
 
 ## Introducción
 Última fase del recorrido como **junior IT** dentro de EverPia. Este proyecto final sirve para demostrar madurez profesional, autonomía y capacidad técnica antes de dar el salto a un rol más independiente.
