@@ -52,3 +52,11 @@
 
 ## Resumen Final
 Este proyecto es la culminación del periodo de prácticas: una demostración de habilidades técnicas, organizativas y profesionales que marca el paso de estudiante a un perfil júnior capacitado para el entorno IT real.
+
+[t01](t01)
+[t02](t02)
+[t03](t03)
+[t04](t04)
+[t01](t01)
+[t05](t05)
+[t06](t06)
