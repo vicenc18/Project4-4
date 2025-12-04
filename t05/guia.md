@@ -1,16 +1,5 @@
 #   SSH — Guia Completa amb Evidències (Activitat T05)
 
-Aquesta **Prova de Concepte (PoC)** forma part de la pràctica de gestió remota amb **SSH**.  
-L’objectiu és demostrar i documentar com realitzar connexions SSH des de **Linux** i **Windows**, utilitzant màquines virtuals i recopilant captures del procés.
-
-El document inclou:
-- Explicació de l’activitat.
-- Procediment realitzat.
-- Imatges provinents de la carpeta `IMG`.
-- Conclusió final.
-
----
-
 ## 1. Descripció de l’Activitat
 
 El propòsit d’aquesta activitat és aprendre i documentar com establir connexions SSH entre clients i servidors en un entorn segur simulat amb màquines virtuals.
@@ -30,7 +19,6 @@ El propòsit d’aquesta activitat és aprendre i documentar com establir connex
 
 | Màquina | Sistema | Rol |
 |--------|---------|-----|
-| Client Linux | Ubuntu / Debian | Origen de connexió SSH |
 | Client Windows | Windows 10/11 | Origen de connexió SSH |
 | Servidor Linux | Ubuntu / Debian | Destí de la connexió SSH |
 
