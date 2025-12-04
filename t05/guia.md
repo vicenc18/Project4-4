@@ -44,5 +44,10 @@ ssh usuari@IP servidor
 
 ![ssh conectar a windous](IMG/sshconectecio.png)
 
-
+## Creem el segon usuari
+Per afegir un nou usuari al servidor, utilitzem la comanda:
+``` bash
+sudo adduser nomdelusuari
+```
+![add user2](IMG/user2.png)
 
