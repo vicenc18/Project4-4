@@ -94,7 +94,7 @@ winget install --id=wiresharkfundation-wireshark -e
 ```
 ![install wireshark](IMG/w11sharkinstall.png)
 
-# 1.6 capturar paquets del ssh 
+### 1.6 capturar paquets del ssh 
 Per verificar que la connexió SSH és segura i xifrada, utilitzem Wireshark per capturar el tràfic entre el client Windows 11 i el servidor Linux.
 ![wiresark](IMG/capturarpaquets.png)
 
