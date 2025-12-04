@@ -15,11 +15,25 @@ El propòsit d’aquesta activitat és aprendre i documentar com establir connex
 
 ---
 
-## 🧱 2. Entorn de Proves
+## 2. Entorn de Proves
 
 | Màquina | Sistema | Rol |
 |--------|---------|-----|
 | Client Windows | Windows 10/11 | Origen de connexió SSH |
 | Servidor Linux | Ubuntu / Debian | Destí de la connexió SSH |
 
+### instalacio de shh al servidor 
+El primer pas per permetre connexions remotes és assegurar que el servidor Linux tingui instal·lat el servei OpenSSH Server, que és el paquet responsable de rebre i gestionar connexions SSH entrants.
+L’ordre següent instal·la el servidor SSH en sistemes basats en Ubuntu/Debian:
+``` bash
+sudo apt install ssh
+```
+![instalacio ssh](IMG/intallshh.png)
+Per verificar que el servei SSH està en funcionament al servidor, s’utilitza la comanda:
+
+### L'estat d' el ssh 
+``` bash
+sudo systemctl status ssh
+```
+![status ssh](IMG/status.ssh.png)
 
