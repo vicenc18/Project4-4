@@ -22,7 +22,7 @@ El propòsit d’aquesta activitat és aprendre i documentar com establir connex
 | Client Windows | Windows 10/11 | Origen de connexió SSH |
 | Servidor Linux | Ubuntu / Debian | Destí de la connexió SSH |
 
-### instalacio de shh al servidor 
+### Instalacio de shh al servidor 
 El primer pas per permetre connexions remotes és assegurar que el servidor Linux tingui instal·lat el servei OpenSSH Server, que és el paquet responsable de rebre i gestionar connexions SSH entrants.
 L’ordre següent instal·la el servidor SSH en sistemes basats en Ubuntu/Debian:
 ``` bash
@@ -51,7 +51,7 @@ sudo adduser nomdelusuari
 ```
 ![add user2](IMG/user2.png)
 
-## modificar el archiu /etc/ssh/ssh_config
+## Modificar el archiu /etc/ssh/ssh_config
 Per configurar opcions generals del client SSH al servidor (o a la màquina local), editem el fitxer de configuració:
 ```bash
 sudo nano /etc/ssh/ssh_config
@@ -60,14 +60,14 @@ sudo nano /etc/ssh/ssh_config
 
 ![ssh_config2](IMG/ssh_config2.png)
 
-## intentem fer ssh amb user2ç
+## Intentem fer ssh amb user2ç
 Per intentar connectar-nos amb el nou usuari (user2) al servidor, utilitzem:
 ```bash
 ssh user2@IP servidor
 ```
 ![user 2](IMG/imgpermiseddeined.png)
 
-## 3 client w11
+## 3 Client w11
 ### 1.3 Pont segur entre el client y el servidor
 Per establir un túnel o pont segur des del client Windows 11 al servidor Linux, utilitzem la comanda següent:
 ```bash
