@@ -60,8 +60,24 @@ sudo nano /etc/ssh/ssh_config
 
 ![ssh_config2](IMG/ssh_config2.png)
 
-## intentem fer ssh amb user2
+## intentem fer ssh amb user2ç
+Per intentar connectar-nos amb el nou usuari (user2) al servidor, utilitzem:
 ```bash
 ssh user2@IP servidor
 ```
 ![user 2](IMG/imgpermiseddeined.png)
+
+## 3 client w11
+### 1.3 Pont segur entre el client y el servidor
+Per establir un túnel o pont segur des del client Windows 11 al servidor Linux, utilitzem la comanda següent:
+```bash
+ssh -D 9876 usuari@IP servidor
+```
+![pont segur client servidor](IMG/windosshh(1).png)
+
+###1.4 confuguracio d' internet 
+
+![inernet](IMG/internet1.png)
+
+![inernet 2](IMG/internet2.png)
+
