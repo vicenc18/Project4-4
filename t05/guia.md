@@ -51,3 +51,17 @@ sudo adduser nomdelusuari
 ```
 ![add user2](IMG/user2.png)
 
+## modificar el archiu /etc/ssh/ssh_config
+Per configurar opcions generals del client SSH al servidor (o a la màquina local), editem el fitxer de configuració:
+```bash
+sudo nano /etc/ssh/ssh_config
+```
+![ssh_config 1](IMG/ssh_config.png)
+
+![ssh_config2](IMG/ssh_config2.png)
+
+## intentem fer ssh amb user2
+```bash
+ssh user2@IP servidor
+```
+![user 2](IMG/imgpermiseddeined.png)
