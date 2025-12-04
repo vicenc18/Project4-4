@@ -36,4 +36,13 @@ Per verificar que el servei SSH està en funcionament al servidor, s’utilitza 
 sudo systemctl status ssh
 ```
 ![status ssh](IMG/status.ssh.png)
+En aquest pas, ens connectem des del nostre equip Windows al servidor Linux utilitzant el client SSH incorporat a PowerShell o Windows Terminal.
+## ens conectem al servidor per ssh 
+``` bash
+ssh usuari@IP servidor
+```
+
+![ssh conectar a windous](IMG/sshconectecio.png)
+
+
 
