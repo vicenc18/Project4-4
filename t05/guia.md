@@ -87,14 +87,31 @@ Comprovar que la connexió a Internet és estable i que no hi ha bloquejos de xa
 
 ![inernet 2](IMG/internet2.png)
 
-###1.5 instalacio del wireshark
+###1.5 Instalacio del wireshark
 Per monitoritzar i analitzar el tràfic de xarxa al client Windows 11, instal·lem Wireshark utilitzant winget:
 ``` bash
 winget install --id=wiresharkfundation-wireshark -e
 ```
 ![install wireshark](IMG/w11sharkinstall.png)
 
-### 1.6 capturar paquets del ssh 
+### 1.6 Capturar paquets del ssh 
 Per verificar que la connexió SSH és segura i xifrada, utilitzem Wireshark per capturar el tràfic entre el client Windows 11 i el servidor Linux.
 ![wiresark](IMG/capturarpaquets.png)
 
+### 1.6 Afeguir open ssh
+Per permetre que el sistema Windows 11 accepti connexions SSH entrants, cal instal·lar OpenSSH Server:
+![openssh](IMG/openssh.png)
+
+### 1.7 Executem Start-Service sshd
+Per posar en marxa el servei OpenSSH Server a Windows 11, utilitzem la comanda:
+``` bash
+Start-Service sshd
+```
+![startservice](IMG/sshd.png)
+
+### 1.8 Executem Set-Service -Name sshd -StartupType "Automatic"
+Per assegurar que el servei OpenSSH Server s’iniciï automàticament cada cop que s’arranca Windows 11, utilitzem la comanda:
+``` bash
+Set-Service -Name sshd -StartupType "Automatic"
+```
+![set](IMG/start.png)
