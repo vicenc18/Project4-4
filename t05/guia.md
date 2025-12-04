@@ -76,8 +76,25 @@ ssh -D 9876 usuari@IP servidor
 ![pont segur client servidor](IMG/windosshh(1).png)
 
 ###1.4 confuguracio d' internet 
+En aquest pas es comprova i ajusta la configuració de connexió a Internet del client Windows 11 per tal que el túnel SSH creat anteriorment funcioni correctament. Això inclou:
 
+Configurar el navegador o aplicacions perquè utilitzin el proxy SOCKS creat al port 9876 del client.
+
+Verificar que tot el tràfic passant pel túnel SSH és xifrat i passa pel servidor Linux.
+
+Comprovar que la connexió a Internet és estable i que no hi ha bloquejos de xarxa que impedeixin l’ús del túnel.
 ![inernet](IMG/internet1.png)
 
 ![inernet 2](IMG/internet2.png)
+
+###1.5 instalacio del wireshark
+Per monitoritzar i analitzar el tràfic de xarxa al client Windows 11, instal·lem Wireshark utilitzant winget:
+``` bash
+winget install --id=wiresharkfundation-wireshark -e
+```
+![install wireshark](IMG/w11sharkinstall.png)
+
+# 1.6 capturar paquets del ssh 
+Per verificar que la connexió SSH és segura i xifrada, utilitzem Wireshark per capturar el tràfic entre el client Windows 11 i el servidor Linux.
+![wiresark](IMG/capturarpaquets.png)
 
