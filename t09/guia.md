@@ -79,5 +79,24 @@ sudo mkdir -p /srv/nfs/admin_tools
 ```
 ![carpetes](IMG/mkdirubuntu.png)
 
-Asignar permisos
-``` bash 
+### 3.2 Editar al archiu de exportación NFS
+```` bash
+sudo nano /etc/exports
+````
+![](IMG/explorer.png)
+
+### 3.3 Inicia i habilitar el servei
+``` bash
+sudo systemctl start nfs-kernel-server
+```
+![](IMG/start.png)
+
+### 3.4 Muntar el recurs NFS des d’un altre client Linux
+
+Al client, instal·la NFS:
+```` bashç
+sudo apt install nfs-common
+````
+![](IMG/nfsclient.png)
+
+### 3.5 crear el punt de montatge 
