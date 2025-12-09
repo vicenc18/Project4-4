@@ -94,13 +94,18 @@ sudo systemctl start nfs-kernel-server
 ### 3.4 Muntar el recurs NFS des d’un altre client Linux
 
 Al client, instal·la NFS:
-```` bashç
+```` bash
 sudo apt install nfs-common
 ````
 ![](IMG/nfsclient.png)
 
-### 3.5 crear el punt de montatge 
+
+### 3.5 munta la carpeta 
 ````bash
 sudo mkdir -t nfs ip delservidor /nfs/nom de la carpeta /nfs/nom de la carpeta 
 ````
-![](IMG/pintdemontatge.png)
+![](IMG/muntarlacarpeta.png)
+
+3.6 Permisos de la carpeta 
+
+![](IMG/puntdemuntatje.png)
