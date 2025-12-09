@@ -8,6 +8,27 @@ sudo apt update && sudo apt upgrade -y
 ```
 ![captura de upgrade](IMG/captura.upgrade.png)
 
+
+## 1. Creació de grups personalitzats
+
+Després es creen dos grups addicionals per organitzar permisos:
+
+devs → Grup de desenvolupadors
+
+![devs](IMG/creaciodelsgrups.png)
+
+admin → Grup d’administradors
+
+![admin](IMG/groupaddadmin01.png)
+
+🔧 Comandes utilitzades:
+``` bash
+sudo groupadd devs
+sudo groupadd admin
+```
+
+...
+
 ## 2 reació d’els nou usuari
 A la captura es mostra la creació de l’usuari dev01 mitjançant adduser.
 
@@ -33,21 +54,17 @@ Què fa aquesta comanda?
 
 - Finalment, afegeix l’usuari al grup suplementari users (a Debian/Ubuntu).
 
+### 2.1 configuracio dels gups (uid coarents) 
+```` bash
+sudo usermod -u 1001 dev01
+sudo usermod -u 1002 admin01
+````
 
-...
+![
 
-2. Creació de grups personalitzats
-
-Després es creen dos grups addicionals per organitzar permisos:
-
-devs → Grup de desenvolupadors
-
-![devs](IMG/creaciodelsgrups.png)
-
-admin → Grup d’administradors
-
-![admin](IMG/groupaddadmin01.png)
-
-🔧 Comandes utilitzades:
-sudo groupadd devs
-sudo groupadd admin
+## 3 instalar y configurar nfs
+Ejecuta:
+```
+sudo apt install nfs-kernel-server
+```
+![instalar nfs ](IMG/instalarnfs.png)
