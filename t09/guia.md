@@ -60,7 +60,10 @@ sudo usermod -u 1001 dev01
 sudo usermod -u 1002 admin01
 ````
 
-![
+![uid](IMG/uid.png)
+
+El UID (User ID) del usuario dev01 a 1001
+El UID del usuario admin01 a 1002
 
 ## 3 instalar y configurar nfs
 Ejecuta:
@@ -68,3 +71,13 @@ Ejecuta:
 sudo apt install nfs-kernel-server
 ```
 ![instalar nfs ](IMG/instalarnfs.png)
+
+### 3.1 Crear la carpeta que compartirás
+``` bash
+sudo mkdir -p /srv/nfs/devs-projectes
+sudo mkdir -p /srv/nfs/admin_tools
+```
+![carpetes](IMG/mkdirubuntu.png)
+
+Asignar permisos
+``` bash 
