@@ -109,3 +109,9 @@ sudo mkdir -t nfs ip delservidor /nfs/nom de la carpeta /nfs/nom de la carpeta
 3.6 Permisos de la carpeta 
 
 ![](IMG/puntdemuntatje.png)
+## dels usuaris en el client
+````bash
+
+
+## ditar al archiu de exportación NFS (client)
+  
