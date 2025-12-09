@@ -100,3 +100,7 @@ sudo apt install nfs-common
 ![](IMG/nfsclient.png)
 
 ### 3.5 crear el punt de montatge 
+````bash
+sudo mkdir -t nfs ip delservidor /nfs/nom de la carpeta /nfs/nom de la carpeta 
+````
+![](IMG/pintdemontatge.png)
