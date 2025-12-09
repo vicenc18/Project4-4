@@ -13,10 +13,11 @@ A la captura es mostra la creació de l’usuari dev01 mitjançant adduser.
 
 ![creacio dels usuaris](IMG/creaciodelusuariadmin01.png)
 
-🔧 Comanda utilitzada:
+Comanda utilitzada:
+``` bash
 sudo adduser nom del nou usuari
-
-📋 Què fa aquesta comanda?
+```
+Què fa aquesta comanda?
 
 - Crea l’usuari 
 
@@ -32,20 +33,20 @@ sudo adduser nom del nou usuari
 
 - Finalment, afegeix l’usuari al grup suplementari users (a Debian/Ubuntu).
 
-📝 Resultat esperat:
-Adding user `dev01' ...
-Adding new group `dev01' ...
-Adding new user `dev01' (1003) with group `dev01' (1003) ...
-Creating home directory `/home/dev01' ...
+
 ...
 
-📌 2. Creació de grups personalitzats
+2. Creació de grups personalitzats
 
 Després es creen dos grups addicionals per organitzar permisos:
 
 devs → Grup de desenvolupadors
 
+![devs](IMG/creaciodelsgrups.png)
+
 admin → Grup d’administradors
+
+![admin](IMG/groupaddadmin01.png)
 
 🔧 Comandes utilitzades:
 sudo groupadd devs
