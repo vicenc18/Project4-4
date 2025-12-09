@@ -11,7 +11,8 @@ sudo apt update && sudo apt upgrade -y
 ## 2 reació d’els nou usuari
 A la captura es mostra la creació de l’usuari dev01 mitjançant adduser.
 
-[creacio dels usuaris 
+![creacio dels usuaris](IMG/creaciodelusuariadmin01.png)
+
 🔧 Comanda utilitzada:
 sudo adduser nom del nou usuari
 
