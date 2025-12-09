@@ -8,28 +8,28 @@ sudo apt update && sudo apt upgrade -y
 ```
 ![captura de upgrade](IMG/captura.upgrade.png)
 
-## reació d’un nou usuari
-
+## 2 reació d’els nou usuari
 A la captura es mostra la creació de l’usuari dev01 mitjançant adduser.
 
+[creacio dels usuaris 
 🔧 Comanda utilitzada:
-sudo adduser dev01
+sudo adduser nom del nou usuari
 
 📋 Què fa aquesta comanda?
 
-Crea l’usuari dev01.
+- Crea l’usuari 
 
-Assigna automàticament un UID i un GID dins el rang d’usuaris locals.
+- Assigna automàticament un UID i un GID dins el rang d’usuaris locals.
 
-Crea el directori personal /home/dev01.
+- Crea el directori personal /home/nom del usuari.
 
-Copia els fitxers inicials de /etc/skel.
+- Copia els fitxers inicials de /etc/skel.
 
-Demana una contrasenya nova.
+- Demana una contrasenya nova.
 
-Permet afegir informació addicional (opcional).
+- Permet afegir informació addicional (opcional).
 
-Finalment, afegeix l’usuari al grup suplementari users (a Debian/Ubuntu).
+- Finalment, afegeix l’usuari al grup suplementari users (a Debian/Ubuntu).
 
 📝 Resultat esperat:
 Adding user `dev01' ...
