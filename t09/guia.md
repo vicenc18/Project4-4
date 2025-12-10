@@ -19,7 +19,7 @@ devs → Grup de desenvolupadors
 
 admin → Grup d’administradors
 
-![admin](IMG/explorer.png)
+![admin](IMG/exportsverdadero.png)
 
 🔧 Comandes utilitzades:
 ``` bash
