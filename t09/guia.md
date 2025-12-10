@@ -1,141 +1,235 @@
-# Guia servei NFS
----
-## 1. lo primer que sera es updatejar el servidosr ho la maquina:  
+# Guia servei NFS — Versió ampliada
 
-Abans de tot haurem de posar la màquina al dia.  
+A continuació tens la guia amb **més informació en cada punt**, mantenint l'estructura original però afegint detalls útils.
+
+---
+
+## 1. Actualitzar el servidor o la màquina
+
+Abans de configurar res, és important assegurar-se que el sistema està al dia per evitar errors i tenir els últims pegats de seguretat.
+
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
+
 ![captura de upgrade](IMG/captura.upgrade.png)
 
+Aquesta comanda:
 
-## 1. Creació de grups personalitzats
+* Actualitza la llista de paquets disponibles.
+* Instal·la les últimes versions dels paquets que ja tens.
+* Millora estabilitat i seguretat del sistema.
 
-Després es creen dos grups addicionals per organitzar permisos:
+---
 
-devs → Grup de desenvolupadors
+## 1.1 Creació de grups personalitzats
 
-![devs](IMG/creaciodelsgrups.png)
+Els grups permeten gestionar permisos d'una manera més organitzada. Créem dos grups:
 
-admin → Grup d’administradors
+* **devs** → per als desenvolupadors
+* **admin** → per als administradors del sistema
 
-![admin](IMG/exportsverdadero.png)
-
-🔧 Comandes utilitzades:
-``` bash
+```bash
 sudo groupadd devs
 sudo groupadd admin
 ```
 
-...
+Aquests grups s'utilitzaran per assignar permisos de lectura, escriptura o gestió sobre carpetes compartides.
 
-## 2 reació d’els nou usuari
-A la captura es mostra la creació de l’usuari dev01 mitjançant adduser.
+![devs](IMG/creaciodelsgrups.png)
+
+---
+
+## 2. Creació dels nous usuaris
+
+Per crear un usuari nou utilitzem **adduser**, que és interactiu i més complet que *useradd*.
+
+```bash
+sudo adduser nom_del_usuari
+```
 
 ![creacio dels usuaris](IMG/creaciodelusuariadmin01.png)
 
-Comanda utilitzada:
-``` bash
-sudo adduser nom del nou usuari
-```
-Què fa aquesta comanda?
 
-- Crea l’usuari 
 
-- Assigna automàticament un UID i un GID dins el rang d’usuaris locals.
+Aquesta comanda:
 
-- Crea el directori personal /home/nom del usuari.
+* Crea la nova identitat d’usuari.
+* Assigna automàticament UID i GID.
+* Genera el directori personal `/home/usuari`.
+* Solicita contrasenya i dades opcionals.
+* Assigna l’usuari al grup per defecte.
 
-- Copia els fitxers inicials de /etc/skel.
+---
 
-- Demana una contrasenya nova.
+## 2.1 Configuració dels UID coherents
 
-- Permet afegir informació addicional (opcional).
-
-- Finalment, afegeix l’usuari al grup suplementari users (a Debian/Ubuntu).
-
-### 2.1 configuracio dels gups (uid coarents) 
-```` bash
-sudo usermod -u 1001 dev01
-sudo usermod -u 1002 admin01
-````
-
+Perquè NFS funcioni correctament, els UID i GID dels usuaris han de coincidir entre servidor i client.
 ![uid](IMG/uid.png)
 
-El UID (User ID) del usuario dev01 a 1001
-El UID del usuario admin01 a 1002
 
-## 3 instalar y configurar nfs
-Ejecuta:
+```bash
+sudo usermod -u 1001 dev01
+sudo usermod -u 1002 admin01
 ```
-sudo apt install nfs-kernel-server
-```
+
+
+Això garanteix que els permisos siguin reconeguts igual en tots els ordinadors.
+
+---
+
+## 3. Instal·lar i configurar NFS
+
+Instal·lem el servei principal del servidor NFS:
+
 ![instalar nfs ](IMG/instalarnfs.png)
 
-### 3.1 Crear la carpeta que compartirás
-``` bash
+```bash
+sudo apt install nfs-kernel-server
+```
+
+Això instal·la les eines necessàries per compartir carpetes via xarxa.
+
+---
+
+## 3.1 Crear les carpetes a compartir
+
+![carpetes](IMG/mkdirubuntu.png)
+
+```bash
 sudo mkdir -p /srv/nfs/devs-projectes
 sudo mkdir -p /srv/nfs/admin_tools
 ```
-![carpetes](IMG/mkdirubuntu.png)
 
-### 3.2 Editar al archiu de exportación NFS
-```` bash
-sudo nano /etc/exports
-````
+Aquestes carpetes contindran els fitxers que compartirem amb els diferents grups.
+
+---
+
+## 3.2 Editar l’arxiu d’exports
+
 ![](IMG/exportsverdadero.png)
 
-### 3.3 Inicia i habilitar el servei
-``` bash
+Les línies típiques que apareixen a l'arxiu **/etc/exports** (com a la imatge) són:
+
+```
+/srv/nfs/devs-projectes  *(rw,sync,no_subtree_check)
+/srv/nfs/admin_tools     *(rw,sync,no_subtree_check)
+```
+
+L’arxiu `/etc/exports` defineix quines carpetes es comparteixen i amb quins permisos.
+
+```bash
+sudo nano /etc/exports
+```
+
+Aquí pots definir opcions com *rw*, *sync*, *no_subtree_check*, etc.
+
+---
+
+## 3.3 Iniciar i habilitar el servei
+
+```bash
 sudo systemctl start nfs-kernel-server
 ```
 ![](IMG/start.png)
 
-### 3.4 Muntar el recurs NFS des d’un altre client Linux
+Així el servei s’iniciarà automàticament en reiniciar la màquina.
 
-Al client, instal·la NFS:
-```` bash
-sudo apt install nfs-common
-````
+---
+
+## 3.4 Preparar el client Linux
+
+Instal·lem les eines NFS al client:
+
 ![](IMG/nfsclient.png)
-### 3.5 Afeguir les carpetes creades 
 ```bash
-sudo mkdir /srv/nom de la carpeta
-````
+sudo apt install nfs-common
+```
+
+Aquest paquet permet muntar carpetes remotes NFS.
+
+---
+
+## 3.5 Crear els punts de muntatge
+
+```bash
+sudo mkdir /srv/nom_de_la_carpeta
+```
 ![](IMG/carpetesclient.png)
 
-### 3.6 munta la carpeta 
-````bash
-sudo mkdir -t nfs ip delservidor /nfs/nom de la carpeta /nfs/nom de la carpeta 
-````
+Aquests directoris actuen com a punts d'accés a les carpetes remotes.
+
+---
+
+## 3.6 Muntar la carpeta NFS manualment
+
+La comanda que habitualment apareix a la imatge és:
+
 ![](IMG/muntarlacarpeta.png)
 
-### 3.7 Permisos de la carpeta 
+```
+sudo mount -t nfs IP_DEL_SERVIDOR:/srv/nfs/devs-projectes /srv/devs-projectes
+```
+
+`sudo mount -t nfs IP_DEL_SERVIDOR:/srv/nfs/admin_tools /srv/admin_tools`
+
+```bash
+sudo mount -t nfs IP_DEL_SERVIDOR:/ruta/remota /ruta/local
+```
+
+Això et permet provar si el servei està funcionant correctament.
+
+---
+
+## 3.7 Permisos de la carpeta
+
+És important verificar que:
+
+* Els permisos coincideixin entre servidor i client.
+* Els UID/GID siguin iguals.
+* Els grups estiguin correctament creats.
 
 ![](IMG/puntdemuntatje.png)
 
-## Afeguir els gups amb el mateix uid 
-```bash
-sudo groupadd -g uid nom del grup
-````
+---
 
+## Afegir grups amb el mateix UID al client
+
+```bash
+sudo groupadd -g UID nom_del_grup
+```
 ![groups](IMG/groupsclient.png)
 
-## afeguir els usuaris creats en el servidor 
-````bash
-sudo useradd -m -u 1001 -g uid del usuari nom del usuari
-````
+Això manté coherència entre màquines.
+
+---
+
+## Afegir usuaris amb el mateix UID
+
 ![usuaris](IMG/usuarisclient.png)
 
-## comprovar que tot estigui correcte 
-````bsh 
-cat | tail /etc/group
-````
+```bash
+sudo useradd -m -u 1001 -g GID nom_usuari
+```
 
+Amb això, els permisos NFS funcionaran correctament.
+
+---
+
+## Comprovar els grups
+
+```bash
+cat /etc/group | tail
+```
 ![](IMG/cat.png)
 
-## ditar al archiu fastab (client)
-````bash
-sudo nano /etc/fastab
-````
+Permet validar que s'han creat correctament.
+
+---
+
+## Editar /etc/fstab per muntatge automàtic
+
+```bash
+sudo nano /etc/fstab
+```
 ![](IMG/fastab.png)
