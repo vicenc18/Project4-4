@@ -83,7 +83,7 @@ sudo mkdir -p /srv/nfs/admin_tools
 ```` bash
 sudo nano /etc/exports
 ````
-![](IMG/explorer.png)
+![](IMG/exportsverdadero.png)
 
 ### 3.3 Inicia i habilitar el servei
 ``` bash
