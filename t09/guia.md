@@ -98,20 +98,44 @@ Al client, instal·la NFS:
 sudo apt install nfs-common
 ````
 ![](IMG/nfsclient.png)
+### 3.5 Afeguir les carpetes creades 
+```bash
+sudo mkdir /srv/nom de la carpeta
+````
+![](IMG/carpetesclient.png)
 
-
-### 3.5 munta la carpeta 
+### 3.6 munta la carpeta 
 ````bash
 sudo mkdir -t nfs ip delservidor /nfs/nom de la carpeta /nfs/nom de la carpeta 
 ````
 ![](IMG/muntarlacarpeta.png)
 
-3.6 Permisos de la carpeta 
+### 3.7 Permisos de la carpeta 
 
 ![](IMG/puntdemuntatje.png)
-## dels usuaris en el client
+
+## Afeguir els gups amb el mateix uid 
+```bash
+sudo groupadd -g uid nom del grup
+````
+
+![groups](IMG/groupsclient.png)
+
+## afeguir els usuaris creats en el servidor 
 ````bash
+sudo useradd -m -u 1001 -g uid del usuari nom del usuari
+````
+![usuaris](IMG/usuarisclient.png)
 
+## comprovar que tot estigui correcte 
+````bsh 
+cat | tail /etc/group
+````
 
-## ditar al archiu de exportación NFS (client)
-  
+![](IMG/cat.png)
+
+## ditar al archiu fastab (client)
+````bash
+sudo nano /etc/fastab
+````
+![](IMG/fastab.png)
