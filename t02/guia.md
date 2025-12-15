@@ -50,22 +50,28 @@ sudo mkfs.xfs /dev/sdb
 sudo mkdir /media/backup
 sudo mount /dev/sdb /media/backup
 
+( imatge 6)
+
 ### 2 Instal·lar Duplicity
 sudo apt install duplicity
+
+(imatge 7)
 
 ### 3️ Crear dades de prova
 
 Afegir usuaris nous.
-
 Crear 4 arxius de 10 MB a /home/usuari.
 
-4️⃣ Còpia completa
+(imatge 8)
+### 4️ Còpia completa
 duplicity /home file:///media/backup
 
-5️⃣ Restauració
+(imateg 9)
+### 5️ Restauració
 duplicity restore file:///media/backup /home
 
-6️⃣ Còpia incremental
+(imatge 10)
+### 6️ Còpia incremental
 
 Crear arxiu de 4 MB
 
@@ -93,3 +99,5 @@ umount /media/backup
 Cron (dilluns a dissabte 23:00):
 
 0 23 * * 1-6 root /root/incrementalbackup.sh
+
+(imatge 11)
