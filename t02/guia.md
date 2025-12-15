@@ -10,7 +10,7 @@ Duplicity a Ubuntu Server (disc extern + scripts + cron)
 Crear una màquina virtual Windows 11.
 Afegir un disc secundari de 10 GB i formatar-lo.
 
-(IMATGE 1)
+![](IMG/imatge1.png)
 
 ### 2Instal·lació de Duplicati
 Baixar-lo des de https://duplicati.com
