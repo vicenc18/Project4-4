@@ -48,7 +48,7 @@ Esborrar Documents.
 Restaurar des del disc local.
 Restaurar també des del núvol per provar.
 
-(IMATGE 5)
+![](IMG/restaurar.png)
 
 ## Part 2 — Backup a Ubuntu Server amb Duplicity
 ### 1️ Preparar disc de backup
