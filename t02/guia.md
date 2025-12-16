@@ -16,7 +16,7 @@ Afegir un disc secundari de 10 GB i formatar-lo.
 Baixar-lo des de https://duplicati.com
 Instal·lar-lo i obrir la interfície web.
 
-(IMATGE 2)
+![](IMG/imatge2.png)
 
  ### 3 Configuració del backup local
 
@@ -25,14 +25,16 @@ Carpetes a copiar: Perfil d'usuari (Documents, etc.)
 Destí: D:\Backup
 Programació: cada hora
 
-(IMATGE 3)
+![](IMG/imatge3-1.png)
+
+![](IMG/imatge3-2.png)
 
 ### 4 Backup al núvol (Google Drive)
 Crear una segona tasca.
 Destí: Google Drive → autoritzar compte.
 Hora d’execució: 18:00
 
-(IMATGE 4)
+![](IMG/image4.png)
 
 ### 5️ Restauració
 
