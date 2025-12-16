@@ -29,6 +29,10 @@ Programació: cada hora
 
 ![](IMG/imatge3-2.png)
 
+![](IMG/general.png)
+
+![](IMG/2.png)
+
 ### 4 Backup al núvol (Google Drive)
 Crear una segona tasca.
 Destí: Google Drive → autoritzar compte.
@@ -36,8 +40,8 @@ Hora d’execució: 18:00
 
 ![](IMG/image4.png)
 
+![](IMG/3.png)
 ### 5️ Restauració
-
 Afegir fitxers a Documents.
 Esperar la còpia.
 Esborrar Documents.
