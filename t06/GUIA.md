@@ -2,6 +2,8 @@
 ## 1. Configurar l’Escriptori Remot a Windows
 ###1.1 Accedir a la configuració
 
+![](IMG/1.png)
+
 Obrim el menú Inici a Windows i escrivim “Escriptori remot”.
 Seleccionem Configuració d’Escriptori remot.
 
@@ -12,10 +14,14 @@ Activem l’opció Habilitar l’escriptori remot.
 Això permetrà que altres equips puguin connectar-s’hi.
 (afegir imatge: interruptor per habilitar l’escriptori remot)
 
+![](IMG/7.png)
+
 ### 1.3 Afegir usuaris autoritzats
 Premem Seleccionar usuaris que poden accedir a aquest ordinador.
 Afegim els usuaris amb el format: NomDelOrdinador\Usuari.
 Premem Aceptar.
+
+
 
 (afegir imatge: finestra per afegir usuaris)
 
