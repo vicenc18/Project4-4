@@ -20,9 +20,11 @@ Això permetrà que altres equips puguin connectar-s’hi.
 Premem Seleccionar usuaris que poden accedir a aquest ordinador.
 Afegim els usuaris amb el format: NomDelOrdinador\Usuari.
 Premem Aceptar.
+![](IMG/2.png)
 
+![](IMG/2.png)
 
-
+![](IMG/3.png)
 (afegir imatge: finestra per afegir usuaris)
 
 ## 2. Connectar-nos des de Zorin
@@ -40,10 +42,14 @@ A Zorin, obrim el programa Remmina (o un altre client RDP).
 En la barra superior de Remmina, escrivim el nom de l’ordinador Windows amb format:
 nomdelordinador.local
 
+![](IMG/5.png)
+
 (afegir imatge: camp on posar el nom del PC)
 
 ### 2.4 Posar les credencials d’usuari
 Introduïm el nom d’usuari i contrasenya que hem afegit abans a Windows.
 Premem Connectar.
 
-(afegir imatge: finestra d’inici de sessió i pantalla final del desktop remot)
+![](IMG/6.png)
+
+![](IMG/8.png)
