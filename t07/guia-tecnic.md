@@ -1,73 +1,80 @@
 # T07: Accés remot. Serveis d’assistència remota
 ### Fet per: Pau Guerrero i Vicenç Obiol
 ---
-
-![imatge](IMG/image09.png)
-
-Cerquem TeamViewer des de qualsevol navegador per poder connectar-nos de manera ràpida i segura. Aquesta eina ens permet veure i controlar l’ordinador del client sense necessitat que ell faci configuracions complicades.
+# Guia de connexió remota amb TeamViewer (visió del tècnic)
 
 ---
 
-![imatge](IMG/image01.png)
+Cerco **TeamViewer** des de qualsevol navegador per poder connectar-me de manera ràpida i segura a l’equip del client. Aquesta eina em permet veure i controlar el seu ordinador sense que hagi de realitzar configuracions complicades.
 
-El descarreguem des de la pàgina web oficial per assegurar-nos que tenim la versió més segura i actualitzada.
-
----
-
-![imatge](IMG/image02.png)
-
-Esperem que es completi la descàrrega abans de començar la instal·lació.
+![](IMG/1.png.png)
 
 ---
 
-![imatge](IMG/image03.png)
+Accedeixo a la **pàgina web oficial de TeamViewer** i en faig la descàrrega des d’allà, assegurant-me d’utilitzar sempre la versió més segura i actualitzada.
 
-Fem clic a Acceptar i continuar per instal·lar el programa al nostre ordinador.
+![](IMG/2.png.png)
+
 
 ---
 
-![imatge](IMG/image04.png)
+Espero que la **descàrrega finalitzi correctament** abans d’iniciar la instal·lació del programa.
 
-Acceptem els acords i condicions i seguim amb la instal·lació. Això garanteix que tot funcioni correctament i de manera segura.
-
----
-
-![imatge](IMG/image05.png)
-
-Quan arribem a la pantalla principal, hem de crear un compte si és la primera vegada que utilitzem TeamViewer. Si ja tenim compte, només cal iniciar sessió.
+![](IMG/3.png.png)
 
 ---
 
-![imatge](IMG/image06.png)
+Executo l’instal·lador i faig clic a **“Acceptar i continuar”** per començar la instal·lació al meu equip.
 
-Així accedim a la pàgina principal del nostre usuari, des d’on podrem iniciar o unir-nos a sessions de suport remot.
-
----
-
-![imatge](IMG/image07.png)
-
-Al menú de l’esquerra, anem a Suport Remot i seleccionem Unir-se a una sessió per connectar-nos a l’ordinador del client de manera immediata.
+![](IMG/4.png.png)
 
 ---
 
-![imatge](IMG/image08.png)
+Accepto els **acords i condicions** i continuo amb el procés d’instal·lació, garantint que el programari funcioni correctament i de manera segura.
 
-Per unir-nos a la sessió, introduïm el codi que ens proporciona la persona que vol connectar-se. A continuació, hem de donar-li permís perquè pugui accedir i treballar remotament al nostre dispositiu.
-
----
-
-![imatge](IMG/10.png)
-
-
-I ja està! L’usuari pot connectar-se i controlar el dispositiu remotament sense problemes. 
+![](t07/IMG/5.png.png)
 
 ---
 
-### Recomanacions per a Sessions Segures:
-No desar contrasenyes del client – Cada sessió genera una contrasenya nova per protegir la seguretat.
+Quan arribo a la pantalla principal, **creo un compte de TeamViewer** si és la primera vegada que utilitzo l’eina. Si ja disposo d’un compte, simplement inicio sessió amb les meves credencials.
 
-Tancar sempre la sessió – Quan acabi el suport, cal tancar la connexió per evitar accessos no autoritzats.
+![](IMG/7.png.png)
 
-Utilitzar accés amb compte – Per connexions recurrents, configurar accés fàcil amb compte i autenticació de seguretat.
+---
 
-Informar al client – Explicar al client quines accions realitzarem durant la sessió i què ha de fer, per mantenir transparència i confiança.
+Un cop dins, accedeixo a la **pàgina principal del meu usuari**, des d’on puc iniciar sessions de suport remot o unir-me a sessions ja existents.
+
+![](IMG/8.png.png)
+
+---
+
+Des del **menú lateral esquerre**, selecciono l’opció **“Suport remot”** i faig clic a **“Unir-se a una sessió”** per connectar-me immediatament a l’ordinador del client.
+
+![]()
+
+---
+
+Per establir la connexió, **introdueixo el codi de sessió** que em facilita el client. A continuació, sol·licito i espero la seva autorització per poder accedir i treballar de manera remota al seu dispositiu.
+
+![](IMG/9.png.png)
+
+---
+
+Un cop concedit el permís, la connexió queda establerta i **puc controlar l’equip del client sense problemes**, realitzant les tasques de suport necessàries.
+
+![](IMG/10.png)
+
+---
+
+## Recomanacions per a sessions segures (com a tècnic)
+
+- **No desar les contrasenyes del client**: cada sessió genera una contrasenya nova per mantenir la seguretat.
+- **Tancar sempre la sessió** en finalitzar el suport per evitar accessos no autoritzats.
+- **Utilitzar l’accés mitjançant compte** per a clients recurrents, configurant accés fàcil i sistemes d’autenticació segurs.
+- **Informar sempre el client** de les accions que es realitzaran durant la sessió, mantenint transparència i confiança.
+
+---
+
+Aquesta metodologia em permet oferir un suport remot eficient, professional i segur.
+
+
