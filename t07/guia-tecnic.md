@@ -56,7 +56,8 @@ Per unir-nos a la sessió, introduïm el codi que ens proporciona la persona que
 
 ---
 
-![imatge](IMG/image10.png)
+![imatge](IMG/10.png)
+
 
 I ja està! L’usuari pot connectar-se i controlar el dispositiu remotament sense problemes. 
 
